@@ -35,11 +35,13 @@ class Album extends Component {
                     </colgroup>  
                     <tbody className="album">
                     {
-                        this.state.album.songs.map( (album, index) => 
+                        this.state.album.songs.map( (song, index) => 
                         <tr key={index}>
-                            <th>{this.state.album.songs.title} <i className="ion-ios-play"> </i><i className="ion-ios-pause"></i></th>
-                            <th>{this.state.album.songs.duration}</th>
-                            
+                            <th className="ion-ios-play"></th>
+                            <th className="ion-ios-pause"></th>
+                            <th> {index + 1} </th>
+                            <th> {song.title}</th>
+                            <th>{song.duration}</th>
                         </tr>                       
                      )
                     }
@@ -50,3 +52,7 @@ class Album extends Component {
     }
 }
 export default Album;
+
+
+
+
