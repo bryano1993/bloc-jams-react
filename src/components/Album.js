@@ -148,7 +148,7 @@ class Album extends Component {
                                 </button>
                             </td>
                             <td className="song-title">{song.title}</td>
-                            <td className="song-duration">{song.duration}</td>
+                            <td className="song-duration">{this.formatTime(song.duration)}</td>
                         </tr>                       
                      )
                     }
@@ -158,8 +158,6 @@ class Album extends Component {
                 isPlaying={this.state.isPlaying} 
                 currentSong={this.state.currentSong}
                 currentTime={this.audioElement.currentTime}
-                currentVolume={this.state.currentVolume}
-                maxVolume={this.state.maxVolume}
                 duration={this.audioElement.duration} 
                 handleSongClick={() => this.handleSongClick(this.state.currentSong)}
                 handlePrevClick={() => this.handlePrevClick()}
