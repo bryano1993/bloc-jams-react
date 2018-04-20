@@ -161,47 +161,6 @@ class Album extends Component {
                     </div>
                   </section>
                 </section>
-<<<<<<< HEAD
-                <table id="song-list">
-                    <colgroup>
-                        <col id="song-number-column" />
-                        <col id="song-title-column" />
-                        <col id="song-duration-column" />
-                    </colgroup>  
-                    <tbody className="album">
-                    {
-                        this.state.album.songs.map( (song, index) => 
-                        <tr className="song" key={index} onClick={() => this.handleSongClick(song)} >
-                            <td className="song-actions"> 
-                                <button>
-                                    <span className="song-number">{index+1}</span>         
-                                    <span className="ion-play"></span>
-                                    <span className="ion-pause"></span>
-                                </button>
-                            </td>
-                            <td className="song-title">{song.title}</td>
-                            <td className="song-duration">{this.formatTime(song.duration)}</td>
-                        </tr>                       
-                     )
-                    }
-                    </tbody>
-                </table>
-                <PlayerBar 
-                isPlaying={this.state.isPlaying} 
-                currentSong={this.state.currentSong}
-                currentTime={this.audioElement.currentTime}
-                duration={this.audioElement.duration} 
-                handleSongClick={() => this.handleSongClick(this.state.currentSong)}
-                handlePrevClick={() => this.handlePrevClick()}
-                handleNextClick={() => this.handleNextClick()}
-                handleTimeChange={(e) => this.handleTimeChange(e)}
-                handleVolumeChange={(e) => this.handleVolumeChange(e)}
-                formatTime={(time) => this.formatTime(time)}
-                />
-            </section>
-        );
-    }
-=======
               </div>
             </div>
           </div>
@@ -246,6 +205,5 @@ class Album extends Component {
       </section>
     );
   }
->>>>>>> checkpoint-10-styling
 }
 export default Album;
