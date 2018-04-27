@@ -16,7 +16,8 @@ class Album extends Component {
       currentTime: 0,
       duration: album.songs[0].duration,
       volume: 0.5,
-      isPlaying: false
+      isPlaying: false,
+      revealPlay: false
     };
 
     this.audioElement = document.createElement("audio");
@@ -140,6 +141,7 @@ class Album extends Component {
   }
 
   render() {
+    const play = this.state.revealPlay;
     return (
       <section>
         <div className="row">
@@ -165,20 +167,44 @@ class Album extends Component {
             </div>
           </div>
         </div>
-        <table className="highlight">
+        <table className="highlight centered">
           <tbody className="album">
             {this.state.album.songs.map((song, index) => (
-              <tr
-                className="song"
-                key={index}
-                onClick={() => this.handleSongClick(song)}
-              >
-                <td className="song-actions">
-                  <button>
-                    <span className="song-number">{index + 1}</span>
-                    <span className="ion-play" />
-                    <span className="ion-pause" />
-                  </button>
+              <tr className="song" key={index}>
+                <td
+                  className="song-actions"
+                  onMouseOver={() =>
+                    this.setState({ currentSong: null, revealPlay: true })
+                  }
+                >
+                  {play ? (
+                    <span
+                      onClick={() => this.handleSongClick(song)}
+                      mouseEnter={() =>
+                        this.setState({ currentSong: null, revealPlay: true })
+                      }
+                      mouseLeave={() =>
+                        this.setState({ currentSong: null, revealPlay: false })
+                      }
+                      className={
+                        this.state.currentSong === song && this.state.isPlaying
+                          ? "ion-pause"
+                          : "ion-play"
+                      }
+                    />
+                  ) : (
+                    <span
+                      onClick={() => this.handleSongClick(song)}
+                      mouseEnter={() =>
+                        this.setState({ currentSong: null, play: true })
+                      }
+                      mouseLeave={() =>
+                        this.setState({ currentSong: null, play: true })
+                      }
+                    >
+                      {index + 1}
+                    </span>
+                  )}
                 </td>
                 <td className="song-title">{song.title}</td>
                 <td className="song-duration">

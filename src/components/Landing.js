@@ -18,8 +18,10 @@ const Landing = () => (
                 The world is full of music; why should you have to listen to
                 music that someone else chose?
               </p>
+
               <h2>Unlimited, streaming, ad-free</h2>
               <p>No arbitrary limits. No distractions.</p>
+
               <h2>Mobile enabled</h2>
               <p>
                 Listen to your music on the go. This streaming service is
