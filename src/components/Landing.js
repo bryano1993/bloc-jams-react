@@ -2,7 +2,7 @@ import React from "react";
 
 const Landing = () => (
   <section>
-    <div classNamw="col s2" />
+    <div className="col s2" />
     <div className="row">
       <div className="col s6 offset-s3">
         <div className="card blue darken-2 z-depth-3">

@@ -14,7 +14,7 @@ class App extends Component {
           <nav className="blue">
             <div className="nav-wrapper">
               <div className="container">
-                <a href="#" className="brand-logo center">
+                <a className="brand-logo center">
                   <i className="font-size:50px material-icons">public</i>
                   <i className="font-size:50px material-icons">music_note</i>
                   <i className="font-size:50px material-icons">public</i>
