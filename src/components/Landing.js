@@ -1,5 +1,5 @@
 import React from "react";
-
+// Uncaught SyntaxError: Unexpected token < is the only error thats left. I spoke to a technical coach and he said I can probably get by with it. I nor he was able to resolve this error.
 const Landing = () => (
   <section>
     <div className="col s2" />
