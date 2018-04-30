@@ -181,10 +181,10 @@ class Album extends Component {
                   {play ? (
                     <span
                       onClick={() => this.handleSongClick(song)}
-                      mouseEnter={() =>
+                      onMouseEnter={() =>
                         this.setState({ currentSong: null, revealPlay: true })
                       }
-                      mouseLeave={() =>
+                      onMouseLeave={() =>
                         this.setState({ currentSong: null, revealPlay: false })
                       }
                       className={
@@ -196,10 +196,10 @@ class Album extends Component {
                   ) : (
                     <span
                       onClick={() => this.handleSongClick(song)}
-                      mouseEnter={() =>
+                      onMouseEnter={() =>
                         this.setState({ currentSong: null, play: true })
                       }
-                      mouseLeave={() =>
+                      onMouseLeave={() =>
                         this.setState({ currentSong: null, play: true })
                       }
                     >
