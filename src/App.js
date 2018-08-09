@@ -21,7 +21,7 @@ class App extends Component {
                 </a>
                 <ul id="nav-mobile" className="right hide-on-small-and-down">
                   <li>
-                    <Link to="/">Landing</Link>
+                    <Link to="/">Home</Link>
                   </li>
                   <li>
                     <Link to="/library">Library</Link>
@@ -31,7 +31,7 @@ class App extends Component {
             </div>
           </nav>
 
-          <span className="fontSize DottedBox_content">Bloc </span>
+          <span className="fontSize DottedBox_content">Super </span>
           <span className="fontSize blue-text">Jams</span>
         </header>
         <main>
